@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyonai W. — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="logo">Keyonai W.</span>
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="about" class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Keyonai W.</h1>
+      <p class="tagline">Applied AI/ML, Computer Vision &amp; Robotic Software</p>
+      <p class="bio">
+        I build applied AI systems — from retrieval-augmented generation pipelines to
+        real-time computer vision with PyTorch, OpenCV, and YOLO. My focus areas are
+        <strong>applied AI/ML</strong>, <strong>computer vision</strong>, and
+        <strong>robotic software</strong>, where I'm bringing perception and machine
+        learning models onto real hardware with ROS2 and embedded systems.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="https://github.com/keyonai" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/keyonai-williams" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:wkeyonai@gmail.com">Email</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener" id="resume-link">Resume</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="profile.jpg" alt="Keyonai W." id="profile-photo">
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <div class="wrap">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="distribution" aria-label="Project distribution by category">
+      <div class="dist-row">
+        <span class="dist-label">Applied AI/ML</span>
+        <div class="dist-track"><div class="dist-fill" style="--pct:31%"></div></div>
+        <span class="dist-count">4</span>
+      </div>
+      <div class="dist-row">
+        <span class="dist-label">Computer Vision</span>
+        <div class="dist-track"><div class="dist-fill" style="--pct:69%"></div></div>
+        <span class="dist-count">9</span>
+      </div>
+      <div class="dist-row">
+        <span class="dist-label">Robotic Software</span>
+        <div class="dist-track"><div class="dist-fill dist-fill-empty" style="--pct:0%"></div></div>
+        <span class="dist-count">0</span>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Project categories">
+      <button class="tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="tab" data-filter="ai-rag" role="tab" aria-selected="false">Applied AI/ML</button>
+      <button class="tab" data-filter="computer-vision" role="tab" aria-selected="false">Computer Vision</button>
+      <button class="tab" data-filter="robotics" role="tab" aria-selected="false">Robotic Software</button>
+    </div>
+
+    <div class="lang-filter">
+      <span class="lang-filter-label">Language</span>
+      <div class="tabs tabs-sub" role="tablist" aria-label="Project languages" id="language-tabs">
+        <button class="tab active" data-lang="all" role="tab" aria-selected="true">All</button>
+      </div>
+    </div>
+
+    <div class="project-grid" id="project-grid"></div>
+  </div>
+</section>
+
+<div class="video-modal" id="video-modal" aria-hidden="true">
+  <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+  <div class="video-modal-content" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+    <button class="video-modal-close" id="video-modal-close" aria-label="Close video">&times;</button>
+    <h3 id="video-modal-title"></h3>
+    <div class="video-modal-player" id="video-modal-player"></div>
+  </div>
+</div>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Let's connect.</p>
+    <div class="hero-links">
+      <a class="btn" href="https://github.com/keyonai" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/keyonai-williams" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:wkeyonai@gmail.com">Email</a>
+    </div>
+    <p class="copyright">&copy; 2026 Keyonai W.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
