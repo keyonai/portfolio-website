@@ -275,3 +275,55 @@ languageTabsContainer.addEventListener("click", (e) => {
 buildLanguageTabs();
 updateLanguageTabAvailability();
 renderProjects();
+
+// Email copy-to-clipboard
+function copyToClipboard(text) {
+  const fallback = () => {
+    const temp = document.createElement("textarea");
+    temp.value = text;
+    temp.style.position = "fixed";
+    temp.style.opacity = "0";
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+  };
+
+  if (!navigator.clipboard) {
+    fallback();
+    return;
+  }
+
+  // Some browser/automation contexts leave navigator.clipboard.writeText()
+  // permanently pending instead of resolving or rejecting, so race it
+  // against a short timeout and fall back to execCommand if it stalls.
+  let settled = false;
+  const timeout = setTimeout(() => {
+    if (!settled) {
+      settled = true;
+      fallback();
+    }
+  }, 300);
+
+  navigator.clipboard.writeText(text).then(() => {
+    if (!settled) {
+      settled = true;
+      clearTimeout(timeout);
+    }
+  }).catch(() => {
+    if (!settled) {
+      settled = true;
+      clearTimeout(timeout);
+      fallback();
+    }
+  });
+}
+
+document.querySelectorAll(".email-copy-btn").forEach(btn => {
+  const originalText = btn.textContent;
+  btn.addEventListener("click", () => {
+    copyToClipboard(btn.dataset.email);
+    btn.textContent = "Copied!";
+    setTimeout(() => { btn.textContent = originalText; }, 1500);
+  });
+});

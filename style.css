@@ -149,10 +149,13 @@ body {
   padding: 10px 20px;
   border-radius: 999px;
   border: 1px solid var(--border);
+  background: transparent;
   color: var(--text);
   text-decoration: none;
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
+  cursor: pointer;
   transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
 }
 
