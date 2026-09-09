@@ -1,5 +1,13 @@
 const projects = [
   {
+    name: "Document-Q-A-System-with-Intelligent-RAG-Pipeline",
+    description: "Extern final project — a pharmaceutical document Q&A system that parses multi-page PDFs, routes questions to the relevant document type, and generates cited answers with a quantized LLM.",
+    language: "Python",
+    category: "ai-rag",
+    video: null,
+    url: "https://github.com/keyonai/Document-Q-A-System-with-Intelligent-RAG-Pipeline"
+  },
+  {
     name: "page-level-metadata-with-opensource",
     description: "Extracts and classifies metadata from pharmaceutical PDFs using a locally-run open source LLM (Mistral-7B).",
     language: "Python",
