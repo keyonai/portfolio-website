@@ -4,7 +4,7 @@ const projects = [
     description: "Extern final project — a pharmaceutical document Q&A system that parses multi-page PDFs, routes questions to the relevant document type, and generates cited answers with a quantized LLM.",
     language: "Python",
     category: "ai-rag",
-    video: null,
+    video: "videos/document-qa-demo.mp4",
     url: "https://github.com/keyonai/Document-Q-A-System-with-Intelligent-RAG-Pipeline"
   },
   {
